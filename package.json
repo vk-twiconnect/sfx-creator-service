@@ -1,0 +1,25 @@
+{
+  "name": "sfx-creator-service",
+  "version": "1.0.0",
+  "description": "Create self-extracting archive for Windows Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vk-twiconnect/sfx-creator-service.git"
+  },
+  "keywords": [
+    "node.js",
+    "zip",
+    "sfx",
+    "archive"
+  ],
+  "author": "Vlad Khazin <vlad.khazin@icssolutions.ca>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vk-twiconnect/sfx-creator-service/issues"
+  },
+  "homepage": "https://github.com/vk-twiconnect/sfx-creator-service#readme"
+}

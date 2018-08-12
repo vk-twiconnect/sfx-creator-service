@@ -4,5 +4,5 @@ sudo yum install -y yum-utils \
 sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo && \
-sudo yum update && \
-sudo yum install docker-ce
+sudo yum update -y && \
+sudo yum install -y docker-ce
