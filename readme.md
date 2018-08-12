@@ -49,3 +49,7 @@ curl -XPOST   -H "Content-Type: application/json" \
 
 * Clone the repository
 * Run the bash setup script: `chmod +x ./setup.sh && ./setup.sh`
+
+
+A test harness is here:
+http://74.88.134.103:6002/test_microservice.htm
