@@ -53,4 +53,4 @@ curl -XPOST   -H "Content-Type: application/json" \
 ## Setup
 
 * docker build -t sfx .
-* docker run -it -d --rm --name sfx-app sfx
+* docker run -it -d -p 3000:3000 --rm --name sfx-app sfx
