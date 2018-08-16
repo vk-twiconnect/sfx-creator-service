@@ -49,3 +49,8 @@ curl -XPOST   -H "Content-Type: application/json" \
 
 * Clone the repository
 * Run the bash setup script: `chmod +x ./setup.sh && ./setup.sh`
+
+## Setup
+
+* docker build -t sfx .
+* docker run -it -d -p 3000:3000 --rm --name sfx-app sfx
