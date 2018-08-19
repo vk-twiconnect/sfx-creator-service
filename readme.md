@@ -31,7 +31,7 @@ curl -XPOST   -H "Content-Type: application/json" \
   ]
 }
 ' \
-            'http://localhost:3000/zip'
+            'localhost:3000/zip'
 ```
 
 * Content is base64 encoded
@@ -56,3 +56,8 @@ curl -XPOST   -H "Content-Type: application/json" \
 docker build . --tag twiconnect/sfx-creator-service:1.0 && \
   docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
 ```
+
+## Deployment Models
+
+* `npm start` anywhere where Node.Js v9 runs
+* Container hosting, [sample deployment on Heroku](https://sfx-creator-service-dev.herokuapp.com/)

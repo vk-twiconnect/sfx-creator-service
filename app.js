@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express()
-const zip = require('./zip')
+const express = require('express');
+const app = express();
+const zip = require('./zip');
+const port = process.env.PORT || 3000;
 
 const removeDir = (dir) => {
 }
@@ -26,4 +27,4 @@ app.post('/zip', (req, res) => {
     })
 })
 
-app.listen(3000, () => console.log('Service listening on port 3000!'))
+app.listen(port, () => console.log(`Service listening on port ${port}!`))
