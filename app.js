@@ -8,7 +8,7 @@ const packageJson = require('./package.json');
 app.use(express.json())
 
 app.get('/', (req, res) => res.send({
-  name: packageJson.anme,
+  name: packageJson.name,
   homepage: packageJson.homepage,
   version: packageJson.version,
   description: packageJson.description,
