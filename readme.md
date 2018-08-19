@@ -50,7 +50,9 @@ curl -XPOST   -H "Content-Type: application/json" \
 * Clone the repository
 * Run the bash setup script: `chmod +x ./setup.sh && ./setup.sh`
 
-## Build
+## Build & Run
 
-* docker build . --tag twiconnect/sfx-creator-service:1.0
-* docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
+```
+docker build . --tag twiconnect/sfx-creator-service:1.0 && \
+  docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
+```
