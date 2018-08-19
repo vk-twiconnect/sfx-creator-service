@@ -1,4 +1,6 @@
-FROM node:alpine
+FROM node:10.9.0-alpine
+RUN apk add \
+        zip
 WORKDIR /usr/src/app
 
 COPY . .
