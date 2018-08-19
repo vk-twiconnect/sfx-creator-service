@@ -1,7 +1,7 @@
 {
   "name": "sfx-creator-service",
   "version": "1.0.0",
-  "description": "Create self-extracting archive for Windows Platform",
+  "description": "Create a self-extracting archive for Windows Platform",
   "main": "app.js",
   "scripts": {
     "test": "mocha",
