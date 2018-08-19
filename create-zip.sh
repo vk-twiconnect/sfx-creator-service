@@ -1,4 +1,5 @@
-zip -r $1/target/sfx.zip $1/src && \
-    cat ./unzipsfx-552_win32/unzipsfx.exe $1/target/sfx.zip > $1/target/sfx.exe && \
-    zip -A $1/target/sfx.exe
+cd $1/src && \
+zip -r ../target/sfx.zip ./ && \
+    cat ../../unzipsfx-552_win32/unzipsfx.exe ../target/sfx.zip > ../target/sfx.exe && \
+    zip -A ../target/sfx.exe
     

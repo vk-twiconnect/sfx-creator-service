@@ -54,7 +54,7 @@ exports.zip = (key, data, callbackfn) => {
             })
         })
     } catch(e) {
-
+        console.error(e);
         return callbackfn('500', e.message ? e.message : e);
     }
 

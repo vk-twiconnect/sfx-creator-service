@@ -15,14 +15,14 @@
 
 ```
 curl -XPOST   -H "Content-Type: application/json" \
-            -H "x-api-key: f84e2396-9c14-11e8-98d0-529269fb1459" \
-            -d \
+              -H "x-api-key: f84e2396-9c14-11e8-98d0-529269fb1459" \
+              -d \
 '
 {
   "files": [
     {
       "path": "filename1.txt",
-      "content": "ZmlsZS0xLWNvbnRlbnQ=""
+      "content": "ZmlsZS0xLWNvbnRlbnQ="
     },
     {
       "path": "folder1/filename1.txt",
@@ -31,7 +31,7 @@ curl -XPOST   -H "Content-Type: application/json" \
   ]
 }
 ' \
-          'https://host-name'
+            'http://localhost:3000/zip'
 ```
 
 * Content is base64 encoded
@@ -50,7 +50,7 @@ curl -XPOST   -H "Content-Type: application/json" \
 * Clone the repository
 * Run the bash setup script: `chmod +x ./setup.sh && ./setup.sh`
 
-## Setup
+## Build
 
-* docker build -t sfx .
-* docker run -it -d -p 3000:3000 --rm --name sfx-app sfx
+* docker build . --tag twiconnect/sfx-creator-service:1.0
+* docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
