@@ -60,7 +60,6 @@ exports.zip = (key, data, callbackfn) => {
 }
 
 exports.remove_dir = remove_dir = async (dir) => {
-
     try {
         const files = await readdir(dir)
         await Promise.all(files.map(async (file) => {

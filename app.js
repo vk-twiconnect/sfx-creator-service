@@ -9,6 +9,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.send({
   name: packageJson.anme,
+  homepage: packageJson.homepage,
   version: packageJson.version,
   description: packageJson.description,
   author: packageJson.author,
