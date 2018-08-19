@@ -45,7 +45,7 @@ curl -XPOST   -H "Content-Type: application/json" \
 
 * Content is base64 encoded and needs to be saved with `exe` extension
 
-## Development
+## Development on CentOS
 
 * Clone the repository
 * Run the bash setup script: `chmod +x ./setup.sh && ./setup.sh`
