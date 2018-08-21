@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const zip = require('./zip');
 const port = process.env.PORT || 3000;
-
+const bodyParser = require('body-parser');
 const packageJson = require('./package.json');
 
+app.use(bodyParser.json({limit: '0.5gb', extended: true}))
 app.use(express.json())
 
 app.get('/', (req, res) => res.send({
