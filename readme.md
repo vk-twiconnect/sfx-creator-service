@@ -30,9 +30,17 @@ curl -XPOST   -H "Content-Type: application/json" \
     }
   ]
 }
-' \
-            'localhost:3000/zip'
+' 'localhost:3000/zip'
 ```
+
+Or
+
+```
+curl -XPOST   -H "Content-Type: application/json" \
+              -H "x-api-key: f84e2396-9c14-11e8-98d0-529269fb1459" \
+              -d  "@./test/sampleData.json" 'localhost:3000/zip'
+```
+
 
 * Content is base64 encoded
 * x-api-key is for authentication purposes
