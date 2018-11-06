@@ -1,0 +1,13 @@
+service: sfx
+provider:
+  name: aws # Specify Amazon Web Services
+  runtime: nodejs8.10 # Programming language plus version
+
+functions:
+  app: 
+    handler: lambda.handler 
+    events: 
+      - http:
+          path: /
+          method: ANY
+

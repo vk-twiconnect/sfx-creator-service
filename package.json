@@ -4,8 +4,7 @@
   "description": "Create a self-extracting archive for Windows Platform",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,8 @@
   },
   "homepage": "https://github.com/vk-twiconnect/sfx-creator-service#readme",
   "dependencies": {
-    "express": "^4.16.3",
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.16.4",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

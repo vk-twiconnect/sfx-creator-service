@@ -1,3 +1,4 @@
+'use strict'
 const express = require('express');
 const app = express();
 const zip = require('./zip');
@@ -29,5 +30,4 @@ app.post('/zip', (req, res) => {
     }
   })
 })
-
-app.listen(port, () => console.log(`Service listening on port ${port}!`))
+module.exports = app  
