@@ -67,5 +67,27 @@ docker build . --tag twiconnect/sfx-creator-service:1.0 && \
 
 ## Deployment Models
 
+## Installing node on CentOS
+
+* Install distribution version: `sudo yum install node -y`
+* Install nvm: `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
+* Refresh environment variables: `source ~/.bashrc`
+* Install version 9: `nvm install 9`
+* Set default version: `nvm alias default 9`
+* Verify node version: `nvm --version`
+
+### Local Launch
+
 * `npm start` anywhere where Node.Js v9 runs
 * Container hosting, [sample deployment on Heroku](https://sfx-creator-service-dev.herokuapp.com/)
+
+### Docker Launch
+
+* Build docker image
+* Run a container from the newly created image
+
+### AWS Launch
+
+* Run `npm install`
+* Configure credentials: `./node_modules/serverless/bin/serverless config credentials --provider aws --key AWSKEY --secret AWSKEYPASSWORD`
+* Deploy: `./node_modules/serverless/bin/serverless deploy --stage stage --region us-east-2`
