@@ -97,4 +97,4 @@ curl -XPOST   -H "Content-Type: application/json" \
               -H "x-api-key: f84e2396-9c14-11e8-98d0-529269fb1459" \
               -d  "@./test/sampleData.json" 'https://qnwzp7kmtj.execute-api.us-east-2.amazonaws.com/stage/zip'
 ```
-* Destroy: `./node_modules/serverless/bin/serverless destroy --stage stage --region us-east-2`
+* Destroy: `./node_modules/serverless/bin/serverless remove --stage stage --region us-east-2`
