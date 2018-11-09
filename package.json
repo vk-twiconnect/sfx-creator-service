@@ -4,7 +4,8 @@
   "description": "Create a self-extracting archive for Windows Platform",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "serverless": "^1.32.0"
   }
 }

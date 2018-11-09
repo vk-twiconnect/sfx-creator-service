@@ -61,8 +61,8 @@ curl -XPOST   -H "Content-Type: application/json" \
 ## Build & Run
 
 ```
-docker build . --tag twiconnect/sfx-creator-service:1.0 && \
-  docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
+docker build . --tag twiconnect/sfx-creator-service:1.0 &&
+docker run -it -d -p 3000:3000 --rm --name sfx-creator-service twiconnect/sfx-creator-service:1.0
 ```
 
 ## Deployment Models
@@ -76,18 +76,25 @@ docker build . --tag twiconnect/sfx-creator-service:1.0 && \
 * Set default version: `nvm alias default 9`
 * Verify node version: `nvm --version`
 
-### Local Launch
+### Local
 
 * `npm start` anywhere where Node.Js v9 runs
 * Container hosting, [sample deployment on Heroku](https://sfx-creator-service-dev.herokuapp.com/)
 
-### Docker Launch
+### Docker
 
 * Build docker image
 * Run a container from the newly created image
 
-### AWS Launch
+### AWS
 
 * Run `npm install`
 * Configure credentials: `./node_modules/serverless/bin/serverless config credentials --provider aws --key AWSKEY --secret AWSKEYPASSWORD`
 * Deploy: `./node_modules/serverless/bin/serverless deploy --stage stage --region us-east-2`
+* To test deployed end-point (replace the end-ponit):
+```
+curl -XPOST   -H "Content-Type: application/json" \
+              -H "x-api-key: f84e2396-9c14-11e8-98d0-529269fb1459" \
+              -d  "@./test/sampleData.json" 'https://qnwzp7kmtj.execute-api.us-east-2.amazonaws.com/stage/zip'
+```
+* Destroy: `./node_modules/serverless/bin/serverless destroy --stage stage --region us-east-2`
