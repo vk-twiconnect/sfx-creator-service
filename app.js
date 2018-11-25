@@ -30,6 +30,6 @@ app.post('/zip', (req, res) => {
     }
   })
 })
-//We don't listen anymore, just export it.
-//app.listen(port, () => console.log(`Service listening on port ${port}!`))
+
+app.listen(port, () => console.log(`Service listening on port ${port}!`))
 module.exports = app  
